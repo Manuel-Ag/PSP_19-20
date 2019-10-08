@@ -16,6 +16,9 @@ public class Main {
 			System.out.print((char) c);
 		}
 		
+		//finalizo correctamente
+		System.exit(0);
+		
 	}
 
 }

@@ -1,0 +1,29 @@
+Microsoft Windows [Versi¢n 10.0.17763.737]
+(c) 2018 Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\Profesor\Desktop\Manuel\GitHub\PSP\PSP1>mkdir prueba
+
+C:\Users\Profesor\Desktop\Manuel\GitHub\PSP\PSP1>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: 9808-4F85
+
+ Directorio de C:\Users\Profesor\Desktop\Manuel\GitHub\PSP\PSP1
+
+03/10/2019  21:04    <DIR>          .
+03/10/2019  21:04    <DIR>          ..
+25/09/2019  18:45               301 .classpath
+25/09/2019  18:45               380 .project
+25/09/2019  18:45    <DIR>          .settings
+03/10/2019  20:41    <DIR>          bin
+03/10/2019  21:04                34 comandos.txt
+03/10/2019  21:04                 0 error.txt
+03/10/2019  21:04    <DIR>          prueba
+03/10/2019  21:04                 0 salida.txt
+03/10/2019  20:41    <DIR>          src
+               5 archivos            715 bytes
+               6 dirs  115.759.292.416 bytes libres
+
+C:\Users\Profesor\Desktop\Manuel\GitHub\PSP\PSP1>echo adsfadsf
+adsfadsf
+
+C:\Users\Profesor\Desktop\Manuel\GitHub\PSP\PSP1>

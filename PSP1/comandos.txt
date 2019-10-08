@@ -1,0 +1,3 @@
+mkdir prueba
+dir
+echo adsfadsf

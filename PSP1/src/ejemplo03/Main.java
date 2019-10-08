@@ -6,7 +6,7 @@ import java.io.InputStream;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		// Llamamos al programa ejemplo2
 		File directorio = new File(".\\bin");
 		
@@ -23,6 +23,10 @@ public class Main {
 		while ((c = is.read()) != -1) {
 			System.out.print((char) c);
 		}
+		
+		//comprobamos si ha finalizado correctamente ejemplo02.java
+		System.out.println(p.waitFor()+"");
+		
 	} 
 
 }

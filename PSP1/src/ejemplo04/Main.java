@@ -23,6 +23,8 @@ public class Main {
 		
 		is.close();
 		er.close();
+		
+		System.exit(-1);
 	}
 
 }

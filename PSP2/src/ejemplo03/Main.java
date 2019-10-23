@@ -1,16 +1,18 @@
-package ejemplo01;
+package ejemplo03;
 
 public class Main {
 
 	public static void main(String[] args) {
+
 		// Creamos el hilo
 		Hilo hilo1 = new Hilo();
-		Hilo hilo2 = new Hilo();
-		Hilo hilo3 = new Hilo();
+		hilo1.setName("hilo_prueba");
+		hilo1.setPriority(Thread.MAX_PRIORITY);
 		
 		// Y los ejecutamos
 		hilo1.start();
-		hilo2.start();
-		hilo3.start();
+		
+		System.out.println(hilo1.activeCount());
 	}
+
 }

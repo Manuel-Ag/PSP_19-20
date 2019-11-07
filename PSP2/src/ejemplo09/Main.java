@@ -26,7 +26,7 @@ public class Main {
 		hilo9.start();
 		hilo10.start();
 		
-		Thread.sleep(10000);
+		Thread.sleep(1000);
 		
 		hilo.Suspende();
 		hilo2.Suspende();

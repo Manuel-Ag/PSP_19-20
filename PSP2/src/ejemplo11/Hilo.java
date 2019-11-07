@@ -1,4 +1,4 @@
-package ejemplo09;
+package ejemplo11;
 
 public class Hilo extends Thread {
 	private SolicitaSuspender solicitaSuspender = new SolicitaSuspender();
@@ -7,6 +7,10 @@ public class Hilo extends Thread {
 		super(s);
 	}
 	
+	public Hilo(ThreadGroup group, String name) {
+		super(group, name);
+	}
+
 	public void Suspende() {
 		solicitaSuspender.setBolean(true);
 	}
@@ -20,9 +24,15 @@ public class Hilo extends Thread {
 		
 		while (true) {
 			if (solicitaSuspender.getBolean())
-				System.out.println(contador+"");
+				System.out.println("He han suspendido: " + getName());
 			solicitaSuspender.esperando();
-			System.out.println("Etsoy en funcionamento" + getName());
+			try {
+				sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("Hola soy " + getName() + " contador: " + contador);
 			contador++;
 			
 		}

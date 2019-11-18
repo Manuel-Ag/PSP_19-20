@@ -33,7 +33,7 @@
 
 * Ejemplo05: Creación de grupos de hilos.
 
-* Ejemplo06: (Falta commit)
+* Ejemplo06: Ejemplo método enumerate() de ThreadGroup.
 
 * Ejemplo07: Pausa de un hilo.
 

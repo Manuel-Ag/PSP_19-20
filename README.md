@@ -33,7 +33,7 @@
 
 * Ejemplo05: Creación de grupos de hilos.
 
-* Ejemplo06: (Falta commit)
+* Ejemplo06: Ejemplo método enumerate() de ThreadGroup.
 
 * Ejemplo07: Pausa de un hilo.
 
@@ -54,3 +54,7 @@
 * Ejemplo15: Ejemplo sincronización hilos "cuenta bancaria"
 
 * Ejemplo16: Ejemplo sencillo semáforo
+
+* Ejemplo17: Ejemplo bloqueo de hilos
+
+* Ejemplo18: Modelo productor-consumidor

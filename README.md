@@ -54,3 +54,7 @@
 * Ejemplo15: Ejemplo sincronización hilos "cuenta bancaria"
 
 * Ejemplo16: Ejemplo sencillo semáforo
+
+* Ejemplo17: Ejemplo bloqueo de hilos
+
+* Ejemplo18: Modelo productor-consumidor

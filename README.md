@@ -39,7 +39,7 @@
 
 * Ejemplo08: Método sleep(), interrupt() e isInterrupted()
 
-* Ejemplo09: Suspención de hilo
+* Ejemplo09: Suspensión de hilo
 
 * Ejemplo10: Interrupción de hilos y método join()
 

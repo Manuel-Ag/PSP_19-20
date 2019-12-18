@@ -67,7 +67,7 @@
 
 * Ejemplo02: Conexión simple TCP
 
-* Ejemplo03: Falta commit(Enviar información)
+* Ejemplo03: Conexión con un servidor que no finaliza
 
 * Ejemplo04: Conexión simple UDP
 

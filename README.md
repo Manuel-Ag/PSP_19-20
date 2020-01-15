@@ -65,9 +65,17 @@
 
 * Ejemplo01: Métodos de las clases InetAddress y URL
 
-* Ejemplo02: Conexión simple TCP
+* Ejemplo02: Conexión simple TCP Cliente-Servidor
 
-* Ejemplo03: Conexión con un servidor que no finaliza
+* Ejemplo03: Conexión con un servidor que no finaliza (bucle)
 
-* Ejemplo04: Conexión simple UDP
+* Ejemplo04: Enviar y recibir datagramas (UDP)
+
+* Ejemplo05: MultiCastSocket (UDP)
+
+* Ejemplo06: Envío objetos TCP
+
+* Ejemplo07: Envío objetos UDP
+
+* Ejemplo08: Varios clientes TPC gestionados a través de hilos en el servidor
 

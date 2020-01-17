@@ -16,6 +16,9 @@ public class Datos implements Serializable {
 		this.gana = false;
 		this.juega = true;
 	}
+	public Datos(String cadena) {
+		this.cadena = cadena;
+	}
 	public String getCadena() {
 		return cadena;
 	}

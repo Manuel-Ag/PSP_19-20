@@ -33,14 +33,38 @@ public class HiloServidor extends Thread {
 		try {
 			objectOutputStream.reset();
 			objectOutputStream.writeObject(datos);
+			
+			while (!compartido.isAcabo() || !(datos.intentos < 10)) {
+				datos = (Datos) objectInputStream.readObject();
+				int num = Integer.parseInt(datos.getCadena());
+				String cadena = compartido.nuevaJugada(identificador, num);
+				intentos++;
+				datos = new Datos(cadena, intentos, identificador);
+				
+				if (compartido.isAcabo()) {
+					datos.setJuega(false);
+					if (compartido.getGanador() == identificador)
+						datos.setGana(true);
+				}
+				
+				objectInputStream.reset();
+				objectOutputStream.writeObject(datos);
+					
+			}
+			if (compartido.isAcabo()) {
+				System.out.println("Ha finalizado el juego " + identificador);
+				socket.close();
+				objectInputStream.close();
+				objectOutputStream.close();
+			}
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		while (!compartido.isAcabo() || !(datos.intentos < 10)) {
-			datos = 
-		}
 	}
 
 }

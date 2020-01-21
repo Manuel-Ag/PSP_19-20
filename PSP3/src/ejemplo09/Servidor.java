@@ -20,6 +20,7 @@ public class Servidor {
 			cliente = serverSocket.accept();
 			
 			HiloServidor hiloServidor = new HiloServidor(cliente, compartido, id);
+
 			hiloServidor.start();
 			id++;
 		}

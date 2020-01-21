@@ -6,6 +6,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 public class HiloServidor extends Thread {
+	
 	ObjectOutputStream objectOutputStream;
 	ObjectInputStream objectInputStream;
 	Socket socket;
@@ -13,13 +14,21 @@ public class HiloServidor extends Thread {
 	int identificador;
 	int intentos = 0;
 	
-	public HiloServidor(Socket socket, ObjetoCompartido compartido, int identificador) throws IOException {
+	public HiloServidor(Socket socket, ObjetoCompartido compartido, int identificador) {
 		this.socket = socket;
 		this.compartido = compartido;
 		this.identificador = identificador;
 		
-		objectInputStream = new ObjectInputStream(socket.getInputStream());
-		objectOutputStream = new ObjectOutputStream(socket.getOutputStream());		
+		try {
+			objectOutputStream = new ObjectOutputStream(socket.getOutputStream());	
+			objectInputStream = new ObjectInputStream(socket.getInputStream());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("llego aquí");
+		
 	}
 	
 	public void run() {
@@ -47,7 +56,7 @@ public class HiloServidor extends Thread {
 						datos.setGana(true);
 				}
 				
-				objectInputStream.reset();
+				objectOutputStream.reset();
 				objectOutputStream.writeObject(datos);
 					
 			}

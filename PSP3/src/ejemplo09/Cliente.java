@@ -30,9 +30,9 @@ public class Cliente {
 			String cadena = scanner.nextLine();
 			
 			Datos datosEnviar = new Datos(cadena, datos.getIntentos(), datos.getIdentificador());
+			outputStream.reset();
 			outputStream.writeObject(datosEnviar);
-			
-			inputStream.reset();
+			//inputStream.reset();
 			Datos datosRecibir = (Datos) inputStream.readObject();
 			System.out.println(datosRecibir.getCadena());
 		

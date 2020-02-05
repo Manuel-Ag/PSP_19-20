@@ -79,3 +79,11 @@
 
 * Ejemplo08: Varios clientes TPC gestionados a través de hilos en el servidor
 
+* Ejemplo09: Objeto compartido entre diferentes hilos para compartir datos entre ellos
+
+
+### PSP4   <https://github.com/Manuel-Ag/PSP_19-20/tree/master/PSP4>
+
+* ftpAnonimo: Conexión a un servidor FTP sin necesidad de usuario ni contraseña.
+
+* conexionFilezillaServer: Conexión y gestión de directorios/ficheros en un servidor local FTP.

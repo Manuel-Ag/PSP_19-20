@@ -87,3 +87,5 @@
 * ftpAnonimo: Conexión a un servidor FTP sin necesidad de usuario ni contraseña.
 
 * conexionFilezillaServer: Conexión y gestión de directorios/ficheros en un servidor local FTP.
+
+* Mercury: <https://manuel-ag.gitbook.io/mercury/>

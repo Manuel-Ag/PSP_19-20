@@ -1,7 +1,9 @@
 package conexionFilezillaServer;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -32,7 +34,7 @@ public class SubirFichero {
 			}
 
 			while (true) {
-				System.out.println("1.Subir\n2.Borrar\n3.Renombrar");
+				System.out.println("1.Subir\n2.Borrar\n3.Renombrar\n4.Bajar");
 				Scanner scanner = new Scanner(System.in);
 				String key = scanner.nextLine();
 				switch (key) {
@@ -45,7 +47,23 @@ public class SubirFichero {
 						System.out.println("Fallo al subir");
 					break;
 				case "2":
-					
+					if (cliente.deleteFile("sunny.zip"))
+						System.out.println("Fichero borrado");
+					else
+						System.out.println("Error");
+					break;
+				case "3":
+					if (cliente.rename("sunny2.zip", "1234/sunny2.zip"))
+						System.out.println("Renombrado correcto");
+					else
+						System.out.println("Error");
+					break;
+				case "4":
+					BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("fichero_desc.zip"));
+					if (cliente.retrieveFile("sunny.zip", out))
+						System.out.println("Fichero descargado");
+					else
+						System.out.println("Error");
 					
 					break;
 					

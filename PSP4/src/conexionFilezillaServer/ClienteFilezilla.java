@@ -10,7 +10,13 @@ import java.util.Scanner;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 
-public class SubirFichero {
+/**
+ * 
+ * Conexión a servidor Filezilla Server
+ *
+ */
+
+public class ClienteFilezilla {
 
 	public static void main(String[] args) throws IOException {
 		String servidor = "localhost";

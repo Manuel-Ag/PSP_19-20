@@ -7,8 +7,14 @@ import java.net.SocketException;
 import org.apache.commons.net.smtp.SMTPClient;
 import org.apache.commons.net.smtp.SimpleSMTPHeader;
 
-public class Mercury {
+/**
+ * 
+ * Conexión a servidor local Mercury configurado como SMTP Relay
+ *
+ */
 
+public class Mercury {
+	
 	public static void main(String[] args) throws SocketException, IOException {
 		
 		SMTPClient cliente = new SMTPClient();

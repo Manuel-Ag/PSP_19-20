@@ -8,6 +8,12 @@ import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
 
+/**
+ * 
+ * Conexión a servidor FTP anónimo (sin usuarino ni contraseña)
+ *
+ */
+
 public class ClienteFTP {
 	
 	// Tipo 0, 1 y 2 del tipo de fichero Ftp

@@ -88,6 +88,6 @@
 
 * conexionFilezillaServer: Conexión y gestión de directorios/ficheros en un servidor local FTP.
 
-* Mercury: Servidor local de correo. <https://manuel-ag.gitbook.io/mercury/>
+* Mercury: Servidor local de correo. <https://manuel-ag.gitbook.io/mercury/>.
 
-* SMPT: Envío de email
+* SMPT: Envío de email.

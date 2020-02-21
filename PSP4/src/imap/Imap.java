@@ -14,8 +14,7 @@ import javax.mail.Store;
 import com.sun.mail.imap.IMAPFolder;
 
 public class Imap {
-	private static final String HOST = "pop.gmail.com";
-	private static final String USERNAME = "09876asasas22@gmail.com";
+	private static final String USERNAME = "";
 	private static final String PASSWORD = "";
 
 	public static void main(String[] args) throws MessagingException, IOException {

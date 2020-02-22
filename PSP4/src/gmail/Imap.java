@@ -3,11 +3,12 @@ package imap;
 import java.io.IOException;
 import java.util.Properties;
 
-import javax.mail.Flags.Flag;
 import javax.mail.Flags;
+import javax.mail.Flags.Flag;
 import javax.mail.Folder;
 import javax.mail.Message;
 import javax.mail.MessagingException;
+import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Store;
 
@@ -42,43 +43,54 @@ public class Imap {
 		}
 
 	}
-
+	// listar carpetas
 	private static void listarCarpetas(Store store) throws MessagingException {
-		// listar carpetas
 		Folder[] folders = store.getDefaultFolder().list("*");
 		for (Folder fol : folders)
 			System.out.println(fol.toString());
 	}
 
+	// leer correos según el folder 
 	private static void leerCorreosCarpetas(Store store) throws MessagingException, IOException {
 		IMAPFolder folder = null;
 		String subject = null;
 		Flag flag = null;
 
-		 folder = (IMAPFolder) store.getFolder("[Gmail]/Spam"); // This doesn't work
-		// for other email account
-		//folder = (IMAPFolder) store.getFolder("inbox"); // This works for both email account
+		// se puede elegir la carpeta a consultar
+		folder = (IMAPFolder) store.getFolder("inbox"); 
 
+		// abrir folder en modo lectura-escritura
 		if (!folder.isOpen())
 			folder.open(Folder.READ_WRITE);
+		
 		Message[] messages = folder.getMessages();
 		System.out.println("No of Messages : " + folder.getMessageCount());
 		System.out.println("No of Unread Messages : " + folder.getUnreadMessageCount());
-		System.out.println(messages.length);
+
 		for (int i = 0; i < messages.length; i++) {
 
 			System.out.println("*****************************************************************************");
 			System.out.println("MESSAGE " + (i + 1) + ":");
 			Message msg = messages[i];
-			// System.out.println(msg.getMessageNumber());
-			// Object String;
-			// System.out.println(folder.getUID(msg)
-			
+
+			System.out.println(folder.getUID(msg));
+
 			// ADMINISTRAR CORREOS
-			//msg.setFlag(Flags.Flag.SEEN, true);  // CORREO VISTO
-			//msg.setFlag(Flags.Flag.DELETED, true); // borrado
-			msg.setFlag(Flags.Flag.SEEN, false);
+			msg.setFlag(Flags.Flag.SEEN, true);  // marcar correo visto a true
+			//msg.setFlag(Flags.Flag.DELETED, true); // marcar correo borrado
 			
+			Flags flags = msg.getFlags();
+			Flags.Flag[] sf = flags.getSystemFlags();
+			
+			// Consultar los flags del Message
+			for (int j = 0; j < sf.length; j++) {
+				if (sf[j] == Flags.Flag.DELETED)
+					System.out.println("DELETED message");
+				else if (sf[j] == Flags.Flag.SEEN)
+					System.out.println("SEEN message");
+			}
+
+			// datos del correo electrónico
 			subject = msg.getSubject();
 
 			System.out.println("Subject: " + subject);
@@ -91,6 +103,7 @@ public class Imap {
 			System.out.println(msg.getContentType());
 
 		}
+
 		if (folder != null && folder.isOpen()) {
 			folder.close(true);
 		}

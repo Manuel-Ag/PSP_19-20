@@ -20,7 +20,7 @@ public class Smtp {
 
 	public static void main(String[] args) throws AddressException, MessagingException {
 		String server = "smtp.gmail.com";
-		String username = "09876asasas22@gmail.com";
+		String username = "";
 		String password = "";
 		String destinatario = "";
 		

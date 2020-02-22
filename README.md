@@ -90,4 +90,6 @@
 
 * Mercury: Servidor local de correo. <https://manuel-ag.gitbook.io/mercury/>.
 
-* SMPT: Envío de email.
+* Gmail protocolo SMTP, POP3 e IMAP: <https://github.com/Manuel-Ag/PSP_19-20/tree/master/PSP4/src/gmail>
+    * Javax Mail (Oracle): <https://mvnrepository.com/artifact/com.sun.mail/javax.mail>
+

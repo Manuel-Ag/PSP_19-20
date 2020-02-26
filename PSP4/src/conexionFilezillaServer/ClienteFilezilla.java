@@ -66,8 +66,10 @@ public class ClienteFilezilla {
 					break;
 				case "4":
 					BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("fichero_desc.zip"));
-					if (cliente.retrieveFile("sunny.zip", out))
+					if (cliente.retrieveFile("sunny.zip", out)) {
 						System.out.println("Fichero descargado");
+						out.close();
+					}
 					else
 						System.out.println("Error");
 					
